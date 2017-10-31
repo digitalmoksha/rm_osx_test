@@ -1,0 +1,15 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    motion_print (1.2.0)
+    rake (12.1.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  motion_print
+  rake
+
+BUNDLED WITH
+   1.15.4
