@@ -40,49 +40,21 @@ class AppDelegate
     return_code = alert.runModal
 
     puts "Alert return code: #{return_code}"
-    puts "Various Values Constants:"
-    puts "NSModalResponseOK: #{NSModalResponseOK}"
-    puts "NSModalResponseAbort: #{NSModalResponseAbort}"
-    puts "NSModalResponseCancel: #{NSModalResponseCancel}"
-    puts "NSModalResponseContinue: #{NSModalResponseContinue}"
-    puts "NSModalResponseStop: #{NSModalResponseStop}"
-
-    # these all fail to compile
-    # puts "NSAlertSecondButtonReturn: #{NSAlertSecondButtonReturn}"
-    # puts "NSAlertSecondButton: #{NSAlertSecondButton}"
-    # puts "NSAlertSecond: #{NSAlertSecond}"
-    # puts "NSModalResponse.AlertSecondButtonReturn: #{NSModalResponse.AlertSecondButtonReturn}"
-    # puts "NSModalResponseAlertSecondButtonReturn: #{NSModalResponseAlertSecondButtonReturn}"
-    # puts "NSModalResponse.NSAlertSecondButtonReturn: #{NSModalResponse.NSAlertSecondButtonReturn}"
-    # puts "NSModalResponseAlertSecondButtonReturn: #{NSModalResponseAlertSecondButtonReturn}"
-    # puts "NSModalResponseSecondButtonReturn: #{NSModalResponseSecondButtonReturn}"
-    # puts "NSModalResponseSecond: #{NSModalResponseSecond}"
-    # puts "NSModalResponseSecondButton: #{NSModalResponseSecondButton}"
+    # puts "Various Values Constants:"
+    # puts "NSModalResponseOK: #{NSModalResponseOK}"
+    # puts "NSModalResponseAbort: #{NSModalResponseAbort}"
+    # puts "NSModalResponseCancel: #{NSModalResponseCancel}"
+    # puts "NSModalResponseContinue: #{NSModalResponseContinue}"
+    # puts "NSModalResponseStop: #{NSModalResponseStop}"
 
     case return_code
-    # this compiles, but `NSModalResponseOK` is not meant to be returned from runModal
-    when NSModalResponseOK
-      puts 'NSModalResponseOK'
-
-    # this compiles but gives an error when trying to access it
-    # when NSModalResponse.NSAlertSecondButtonReturn
-    #   puts "NSModalResponse.NSAlertSecondButtonReturn"
-
-    # this is what is should be, but doesn't compile
-    # when NSAlertFirstButtonReturn
-    #   puts 'NSAlertFirstButtonReturn'
-
     # these all fail to compile
-    # when NSAlertFirstButtonReturn
-    #   puts 'NSAlertFirstButtonReturn'
-    # when NSAlertSecondButtonReturn
-    #   puts 'NSAlertSecondButtonReturn'
-    # when NSAlertThirdButtonReturn
-    #   puts 'NSAlertThirdButtonReturn'
-    # when ::KNSAlertSecondButtonReturn
-    # when ::NSModalResponseAlertSecondButtonReturn
-    # when ::NSModalResponse.NSAlertSecondButtonReturn
-    # when ::KNSAlertSecondButtonReturn
+    when NSAlertFirstButtonReturn
+      puts 'NSAlertFirstButtonReturn'
+    when NSAlertSecondButtonReturn
+      puts 'NSAlertSecondButtonReturn'
+    when NSAlertThirdButtonReturn
+      puts 'NSAlertThirdButtonReturn'
 
     else
       puts "NOT HANDLED"
